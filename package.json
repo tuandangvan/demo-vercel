@@ -6,11 +6,11 @@
   "description": "chat-app-server",
   "type": "module",
   "engines": {
-    "node": "18.x"
+    "node": "18.x",
+    "npm": "9.x"
   },
   
   "scripts": {
-    "build": "npm i",
     "dev": "cross-env BUILD_MODE=dev nodemon --exec babel-node ./src/server.js",
     "start": "nodemon --exec babel-node ./src/server.js"
   },
