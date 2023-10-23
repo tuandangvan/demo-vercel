@@ -26,7 +26,7 @@ const START_SERVER = () => {
   app.listen(port, () => {
     // eslint-disable-next-line no-console
     console.log(
-      `3. Hello ${env.AUTHOR} Back-end Server is running successfully at http://${env.APP_HOST}:${env.APP_PORT}/`
+      `3. Hello ${env.AUTHOR} Back-end Server is running successfully at http://${env.APP_HOST}:${port}/`
     );
   });
 
