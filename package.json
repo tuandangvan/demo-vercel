@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "mascara",
   "description": "chat-app-server",
+  "type": "module",
   "engines": {
     "node": "18.x"
   },
