@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
-import Account from "~/models/accountModel";
+import Account from "../models/accountModel.js";
 import { hashSync } from "bcrypt";
-import ApiError from "~/utils/ApiError";
+import ApiError from "../utils/ApiError.js";
 import { StatusCodes } from "http-status-codes";
 import { compareSync } from "bcrypt";
 

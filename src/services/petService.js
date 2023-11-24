@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Pet from "~/models/petModel";
+import Pet from "../models/petModel.js";
 
 const createPet = async function (data) {
   const pet = new Pet({

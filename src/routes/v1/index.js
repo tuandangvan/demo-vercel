@@ -1,10 +1,10 @@
 import express from "express";
 import { StatusCodes } from "http-status-codes";
-import { authRoute } from "./authRoute";
-import { userRoute } from "./userRoute";
-import { petRoute } from "./petRoute";
-import { centerRoute } from "./centerRoute";
-import { postRoute } from "./postRoute";
+import { authRoute } from "./authRoute.js";
+import { userRoute } from "./userRoute.js";
+import { petRoute } from "./petRoute.js";
+import { centerRoute } from "./centerRoute.js";
+import { postRoute } from "./postRoute.js";
 
 const router = express.Router();
 

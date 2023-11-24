@@ -1,8 +1,8 @@
 import { StatusCodes } from "http-status-codes";
-import { enumStatus } from "~/enums/enum";
-import userModel from "~/models/userModel";
-import { postService } from "~/services/postService";
-import ApiError from "~/utils/ApiError";
+import { enumStatus } from "../enums/enum.js";
+import userModel from "../models/userModel.js";
+import { postService } from "../services/postService.js";
+import ApiError from "../utils/ApiError.js";
 
 const addPost = async (req, res, next) => {
   try {

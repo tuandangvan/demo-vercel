@@ -1,4 +1,4 @@
-const nodemailer = require("nodemailer");
+import nodemailer from "nodemailer";
 
 const sendMailAuthencation = async function ({ toMail, subject, text }) {
   try {

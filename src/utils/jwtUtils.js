@@ -1,7 +1,8 @@
-import { sign } from "jsonwebtoken";
-import { env } from "~/config/environment";
+import jwt from 'jsonwebtoken';
+import { KeyObject } from "crypto";
+import { env } from "../config/environment.js";
 const generateAuthToken = async function ({ _id, name }) {
-  const token = await sign(
+  const token = await jwt.sign(
     {
       _id: _id,
       name: name
@@ -12,7 +13,7 @@ const generateAuthToken = async function ({ _id, name }) {
   return token;
 };
 const generateRefreshToken = async function ({ _id, name }) {
-  const token = await sign(
+  const token = await jwt.sign(
     {
       _id: _id,
       name: name

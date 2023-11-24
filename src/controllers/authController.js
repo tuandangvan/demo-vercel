@@ -1,13 +1,13 @@
 import { StatusCodes } from "http-status-codes";
-import ApiError from "~/utils/ApiError";
-import Account from "~/models/accountModel";
-import Constant from "~/utils/contants";
-import { jwtUtils } from "~/utils/jwtUtils";
-import { verify } from "jsonwebtoken";
-import { env } from "~/config/environment";
-import { accountService } from "~/services/accountService";
-import { sendMail } from "~/auth/authencationEmail";
-import { codeOTPService } from "~/services/codeOTPService";
+import ApiError from "../utils/ApiError.js";
+import Account from "../models/accountModel.js";
+import Constant from "../utils/contants.js";
+import { jwtUtils } from "../utils/jwtUtils.js";
+import jwt from 'jsonwebtoken';
+import { env } from "../config/environment.js";
+import { accountService } from "../services/accountService.js";
+import { sendMail } from "../auth/authencationEmail.js";
+import { codeOTPService } from "../services/codeOTPService.js";
 
 const signUp = async (req, res, next) => {
   try {
@@ -67,7 +67,7 @@ const refreshToken = async (req, res, next) => {
         "Refresh token không hợp lệ"
       );
     }
-    await verify(refreshToken, env.JWT_SECRET);
+    await jwt.verify(refreshToken, env.JWT_SECRET);
     const accessToken = await jwtUtils.generateAuthToken(
       account._id,
       account.role

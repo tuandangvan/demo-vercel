@@ -10,7 +10,6 @@
     "npm": "9.x",
     "yarn": "1.x"
   },
-  
   "scripts": {
     "dev": "cross-env BUILD_MODE=dev nodemon --exec babel-node ./src/server.js",
     "start": "nodemon --exec babel-node ./src/server.js"

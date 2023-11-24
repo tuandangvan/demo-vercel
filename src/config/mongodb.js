@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { env } from "~/config/environment";
+import { env } from "./environment.js";
 
 let chatDatabaseInstance = null;
 

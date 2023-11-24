@@ -1,7 +1,7 @@
 import { StatusCodes } from "http-status-codes";
-import accountModel from "~/models/accountModel";
-import { userService } from "~/services/userService";
-import ApiError from "~/utils/ApiError";
+import accountModel from "../models/accountModel.js";
+import { userService } from "../services/userService.js";
+import ApiError from "../utils/ApiError.js";
 
 const createInformation = async (req, res, next) => {
   try {

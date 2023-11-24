@@ -1,11 +1,11 @@
 /* eslint-disable no-console*/
 import express from "express";
-import { CONNECT_DATABASE, CLOSE_DATABASE } from "~/config/mongodb";
+import { CONNECT_DATABASE, CLOSE_DATABASE } from "./config/mongodb.js";
 import exitHook from "async-exit-hook";
-import { env } from "~/config/environment";
-import { APIs_V1 } from "~/routes/v1/index";
+import { env } from "./config/environment.js";
+import { APIs_V1 } from "./routes/v1/index.js";
 import cors from "cors";
-import { errorHandlingMiddleware } from "~/middlewares/errorHandlingMiddleware";
+import { errorHandlingMiddleware } from "./middlewares/errorHandlingMiddleware.js";
 
 const START_SERVER = () => {
   const app = express();
@@ -23,10 +23,10 @@ const START_SERVER = () => {
   // Middleware xử lý lỗi tập trung
   app.use(errorHandlingMiddleware);
 
-  app.listen(port, () => {
+  const server = app.listen(env.APP_PORT, env.APP_HOST, () => {
     // eslint-disable-next-line no-console
     console.log(
-      `3. Hello ${env.AUTHOR} Back-end Server is running successfully at http://${env.APP_HOST}:${port}/`
+      `3. Hello ${env.AUTHOR} Back-end Server is running successfully at http://${env.APP_HOST}:${env.APP_PORT}/`
     );
   });
 

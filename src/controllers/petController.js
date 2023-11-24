@@ -1,8 +1,8 @@
 import { StatusCodes } from "http-status-codes";
-import centerModel from "~/models/centerModel";
-import { centerService } from "~/services/centerService";
-import { petService } from "~/services/petService";
-import ApiError from "~/utils/ApiError";
+import centerModel from "../models/centerModel.js";
+import { centerService } from "../services/centerService.js";
+import { petService } from "../services/petService.js";
+import ApiError from "../utils/ApiError.js";
 
 const createPet = async (req, res, next) => {
   try {

@@ -1,8 +1,8 @@
 import { StatusCodes } from "http-status-codes";
-import accountModel from "~/models/accountModel";
-import centerModel from "~/models/centerModel";
-import { centerService } from "~/services/centerService";
-import ApiError from "~/utils/ApiError";
+import accountModel from "../models/accountModel.js";
+import centerModel from "../models/centerModel.js";
+import { centerService } from "../services/centerService.js";
+import ApiError from "../utils/ApiError.js";
 
 const createInfoForCenter = async (req, res, next) => {
     try {

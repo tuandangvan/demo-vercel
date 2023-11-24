@@ -1,5 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-import { enumStatus } from "~/enums/enum";
+import { enumStatus } from "../enums/enum.js";
 
 const postSchema = mongoose.Schema(
   {

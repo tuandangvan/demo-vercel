@@ -1,5 +1,5 @@
-import { accountModel } from "~/models/accountModel";
-import ApiError from "~/utils/ApiError";
+import { accountModel } from "../models/accountModel.js";
+import ApiError from "../utils/ApiError.js";
 
 const checkRoleUser = async function(email) {
     try {

@@ -1,6 +1,6 @@
 import express, { json } from "express";
 import { StatusCodes } from "http-status-codes";
-import { authController } from "~/controllers/authController";
+import { authController } from "../../controllers/authController.js";
 
 const router = express.Router();
 router.get(
